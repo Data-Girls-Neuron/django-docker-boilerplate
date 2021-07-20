@@ -12,6 +12,7 @@ pip install django
 ```
 
 2. Criação do projeto
+
 No terminal do seu SO, no diretório da pasta em que será armazenado o projeto, execute o seguinte comando:
 ```
 django-admin.py startproject myproject
