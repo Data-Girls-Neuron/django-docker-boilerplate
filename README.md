@@ -70,11 +70,12 @@ Por default, será utilizada a porta `8000` para subir a aplicação (caso queir
 ![django](https://user-images.githubusercontent.com/37030292/126253538-e4296fc0-fdf5-41ca-97da-f5725f77b863.PNG)
 
 6. Bônus: Freezando as versões das libraries
+
 Um recurso muito útil para gerenciar as versões das bibliotecas utilizadas na sua aplicação é criar o arquivo `requirements.txt`
 ```
 pip freeze > requirements.txt
 ```
-O mesmo facilita quando queremos, por exemplo, instalar versões específicas de uma lib dentro do container Docker.
+O mesmo facilita quando queremos, por exemplo, instalar versões específicas de uma lib dentro do container Docker sem afetar as versões das mesmas instaladas na sua máquina.
 
 
 ## Setup Docker
