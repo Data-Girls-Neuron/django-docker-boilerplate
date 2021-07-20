@@ -66,7 +66,8 @@ Para verificar se tudo está rodando como deveria, execute o seguindo comando no
 ```
 python manage.py runserver
 ```
-Por default, será utilizada a porta `8000` para subir a aplicação (caso queira utilizar a porta 8080, por exemplo, utiliza o comando `python manage.py runserver 8080`). Para verificar se a aplicação está rodando corretamente, vá para a URL `http://127.0.0.1:8000/` do seu broswer de preferência.
+Por default, será utilizada a porta `8000` para subir a aplicação (caso queira utilizar a porta 8080, por exemplo, utiliza o comando `python manage.py runserver 8080`). Para verificar se a aplicação está rodando corretamente, vá para a URL `http://127.0.0.1:8000/` do seu broswer de preferência. Você deve visualizar a seguinte tela:
+![django](https://user-images.githubusercontent.com/37030292/126253538-e4296fc0-fdf5-41ca-97da-f5725f77b863.PNG)
 
 6. Bônus: Freezando as versões das libraries
 Um recurso muito útil para gerenciar as versões das bibliotecas utilizadas na sua aplicação é criar o arquivo `requirements.txt`
