@@ -131,3 +131,8 @@ Para subir os containers Docker, precisamos especificar as instruções com os D
 `docker-compose up --build`
 
 4. Vá para `127.0.0.1:8000` no seu browser de preferência
+
+### Docker Hub
+
+![image](https://user-images.githubusercontent.com/37030292/126871486-52c29d5d-f1c1-4be6-9a58-aef120d6fc86.png)
+
