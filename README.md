@@ -91,6 +91,9 @@ Para subir os containers Docker, precisamos especificar as instruções com os D
 - `myproject_web_migrate`: serviço para migração da base de dados em relação à aplicação principal.
 - `myproject_web_run`: serviço para rodar a aplicação principal.
 
+![image](https://user-images.githubusercontent.com/37030292/126871177-5df3401e-4d4c-4f3c-8974-5cf90af8fd30.png)
+
+
 ### Dockerfile
 
 - `FROM python:3.9.1`: cria uma imagem do Docker hub (container pré-formatado com configuração inicial), tratando-se de um container Linux com Python instalado nele.
@@ -98,6 +101,8 @@ Para subir os containers Docker, precisamos especificar as instruções com os D
 - `RUN mkdir /webapps` e `WORKDIR /webapps`: criando e indicando em qual diretório ficarão armazenados os arquivos do projeto.
 - `COPY` e `ADD`: comandos utilizados para copiar as versões das libs Python especificadas no arquivo `requirements.txt` para serem instaladas dentro do container.
 - `EXPOSE 8000`: mapeando a porta do Guest (container) para o Host (seu computador). 
+
+![image](https://user-images.githubusercontent.com/37030292/126871188-55cfa8b5-f0ae-4eb6-920e-3190b7588c1c.png)
 
 ### Rodando a aplicação com Docker
 
@@ -108,6 +113,18 @@ Para subir os containers Docker, precisamos especificar as instruções com os D
 2. Build das imagens e containers Docker
 
 `docker-compose up -d`
+
+- Build serviço da aplicação principal
+![docker1](https://user-images.githubusercontent.com/37030292/126871362-0899521c-93b1-43d5-8b8a-3be02a274f3b.PNG)
+
+- Build serviço de migração da base de dados
+![docker2](https://user-images.githubusercontent.com/37030292/126871220-42002c96-2290-4b57-ae72-067e3ebc3b24.PNG)
+
+- Build serviço para executar a aplicação principal
+![docker3](https://user-images.githubusercontent.com/37030292/126871222-655dc9ee-dfd3-4523-964d-09d66c3cac93.PNG)
+
+- Mensagem esperada após build dos objetos Docker
+![docker4](https://user-images.githubusercontent.com/37030292/126871229-f9a5ca6f-9a4e-412a-939f-c49cb91ee6d5.PNG)
 
 3. Realizando o build e executando sua aplicação
 
