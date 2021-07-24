@@ -82,3 +82,35 @@ O mesmo facilita quando queremos, por exemplo, instalar versões específicas de
 
 
 ## Setup Docker
+
+Para subir os containers Docker, precisamos especificar as instruções com os Docker files. No caso, o arquivo `docker-compose.yml` descreve os serviços para serem criados em cada container, e o arquivo `Dockerfile` detalha o passo-a-passo do build que será realizado.
+
+### docker-compose.yml
+
+- `myproject_web`: serviço da aplicação em si.
+- `myproject_web_migrate`: serviço para migração da base de dados em relação à aplicação principal.
+- `myproject_web_run`: serviço para rodar a aplicação principal.
+
+### Dockerfile
+
+- `FROM python:3.9.1`: cria uma imagem do Docker hub (container pré-formatado com configuração inicial), tratando-se de um container Linux com Python instalado nele.
+- `ENV PYTHONUNBUFFERED 1`: variáveis de ambiente que serão utilizadas dentro do container.
+- `RUN mkdir /webapps` e `WORKDIR /webapps`: criando e indicando em qual diretório ficarão armazenados os arquivos do projeto.
+- `COPY` e `ADD`: comandos utilizados para copiar as versões das libs Python especificadas no arquivo `requirements.txt` para serem instaladas dentro do container.
+- `EXPOSE 8000`: mapeando a porta do Guest (container) para o Host (seu computador). 
+
+### Rodando a aplicação com Docker
+
+1. Entre no diretório do seu projeto
+
+`cd myproject`
+
+2. Build das imagens e containers Docker
+
+`docker-compose up -d`
+
+3. Realizando o build e executando sua aplicação
+
+`docker-compose up --build`
+
+4. Vá para `127.0.0.1:8000` no seu browser de preferência
