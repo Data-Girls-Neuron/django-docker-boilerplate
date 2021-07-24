@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  myproject_web:
+    build: .
+    environment:
+      MYENV: boilerplate_venv
+    volumes:
+      - .:/webapps
+  myproject_web_migrate:
+    extends:
+      service: myproject_web
+    command: python manage.py migrate
+  myproject_web_run:
+    extends:
+      service: myproject_web
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
