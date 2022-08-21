@@ -1,6 +1,6 @@
 # Django + Docker Boilerplate
-- [English](https://github.com/Data-Girls-Neuron/django-docker-boilerplate/edit/main/README.md#english-version)
-- [Portuguese](https://github.com/Data-Girls-Neuron/django-docker-boilerplate/edit/main/README.md#vers%C3%A3o-em-portugu%C3%AAs)
+- [English](#english-version)
+- [Portuguese](#vers%C3%A3o-em-portugu%C3%AAs)
 
 # English Version
 ## Setting up my Django application
